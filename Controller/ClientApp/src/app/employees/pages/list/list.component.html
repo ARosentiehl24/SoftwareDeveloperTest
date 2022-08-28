@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-12">
+    <form (ngSubmit)="search()">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          name="employeeId"
+          placeholder="Search employee by id"
+          [(ngModel)]="employeeId"
+        />
+        <button class="btn btn-primary" type="submit" id="button-addon1">
+          Search
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<ng-container *ngIf="employee; else elseTemplate">
+  <app-employee-info [employee]="employee"></app-employee-info>
+</ng-container>
+<ng-template #elseTemplate>
+  <app-employees-table [employees]="employees"></app-employees-table>
+</ng-template>

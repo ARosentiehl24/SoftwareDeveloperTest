@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col"></th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Anual Salary</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees; let i = index">
+          <th scope="row">
+            {{ i + 1 }}
+          </th>
+          <td>
+            <img
+              class="rounded mx-auto d-block"
+              src="assets/img/no-image.png"
+              alt=""
+              width="100"
+            />
+          </td>
+          <td>
+            {{ employee.employeeName | titlecase }}
+          </td>
+          <td>
+            {{ employee.employeeAge }}
+          </td>
+          <td>
+            {{ employee.employeeSalary | currency }}
+          </td>
+          <td>
+            <a [routerLink]="['/employees', employee.id]">View...</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
