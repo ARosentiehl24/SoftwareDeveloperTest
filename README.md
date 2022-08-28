@@ -32,3 +32,7 @@ para posteriormente ejecutar.
 ![Screenshot](Documentation/lunch.png)
 
 El sistema no debería presentar problemas al ejecutarse.
+
+El ejecutarse se debería ver algo parecido a lo siguiente
+
+![Screenshot](Documentation/platform.png)
